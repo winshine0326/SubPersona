@@ -4,9 +4,8 @@ class NextPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text("다음 페이지"),
-      ),
+      backgroundColor: const Color(0xFF18171D),
+      navigationBar: CupertinoNavigationBar(),
       child: Center(
         child: Text("여기는 두 번째 페이지입니다."),
       ),
