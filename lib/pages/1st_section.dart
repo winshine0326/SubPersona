@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:subpersona/utils/toColor.dart';
 import 'package:subpersona/components/button.dart';
-
+import 'package:subpersona/components/top_layout.dart';
 import 'package:subpersona/pages/home.dart';
 
 class FirstSection extends StatelessWidget {
@@ -21,37 +21,12 @@ class FirstSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
-                      children: [
-                        Text(
-                          "인간 내면 분석기",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.normal,
-                            color: Color(0xFF8C8B91),
-                          ),
-                        ),
-                        SizedBox(height: 12),
-                        GradientText(
-                          "SubPersona",
-                          style: TextStyle(
-                            fontSize: 40,
-                            fontWeight: FontWeight.normal,
-                          ),
-                          colors: [
-                            "#3A9FA9".toColor(),
-                            "#3985E3".toColor(),
-                          ],
-                        ),
-                        SizedBox(height: 40),
-                        Image.asset(
-                          "assets/Rock.png",
-                          width: 171,
-                          height: 166,
-                        ),
-                      ],
+                    TopLayout(
+                      title: "휴대폰을 흔들어보세요",
+                      subtitle: "1단계",
+                      imgPath: "assets/Cone.png",
                     ),
-                    SizedBox(height: 52),
+                    SizedBox(height: 100),
 
                     Container(
                       width: double.infinity,
