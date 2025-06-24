@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:subpersona/home.dart';
+import 'package:subpersona/pages/home.dart';
 
 void main() {
   runApp(const MyApp());
