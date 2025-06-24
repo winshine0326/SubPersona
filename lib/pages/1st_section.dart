@@ -6,6 +6,7 @@ import 'package:subpersona/components/button.dart';
 import 'package:subpersona/components/top_layout.dart';
 import 'package:subpersona/pages/home.dart';
 import 'package:subpersona/components/task_btn.dart';
+import 'package:subpersona/pages/2nd_section.dart';
 
 class FirstSection extends StatelessWidget {
   @override
@@ -27,6 +28,7 @@ class FirstSection extends StatelessWidget {
                       subtitle: "1단계",
                       imgPath: "assets/Cone.png",
                       padding: 52,
+                      titleFont: 35,
                     ),
                     SizedBox(height: 100),
 
@@ -36,7 +38,7 @@ class FirstSection extends StatelessWidget {
                     SizedBox(height: 88),
                     Center(
                       child: AnalyzeButton(
-                        nextPage: HomePage(),
+                        nextPage: SecondSection(),
                         label: '다음으로',
                       ),
                     )

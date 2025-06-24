@@ -8,6 +8,7 @@ class TopLayout extends StatelessWidget{
   final String title;
   final String imgPath;
   final double padding;
+  final double titleFont;
 
   const TopLayout({
     super.key,
@@ -15,6 +16,7 @@ class TopLayout extends StatelessWidget{
     required this.title,
     required this.imgPath,
     this.padding = 40,
+    this.titleFont = 40,
   });
 
   @override
@@ -34,7 +36,7 @@ class TopLayout extends StatelessWidget{
           GradientText(
             title,
             style: TextStyle(
-              fontSize: 40,
+              fontSize: titleFont,
               fontWeight: FontWeight.normal,
             ),
             colors: [
