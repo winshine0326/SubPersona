@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:subpersona/utils/toColor.dart';
 
 import '1st_section.dart';
 
@@ -175,12 +176,3 @@ class HomePage extends StatelessWidget {
   }
 }
 
-extension HexColor on String {
-  Color toColor() {
-    final hex = replaceAll('#', '');
-    final buffer = StringBuffer();
-    if (hex.length == 6) buffer.write('FF');
-    buffer.write(hex);
-    return Color(int.parse(buffer.toString(), radix: 16));
-  }
-}
