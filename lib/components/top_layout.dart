@@ -7,12 +7,14 @@ class TopLayout extends StatelessWidget{
   final String subtitle;
   final String title;
   final String imgPath;
+  final double padding;
 
   const TopLayout({
     super.key,
     required this.subtitle,
     required this.title,
     required this.imgPath,
+    this.padding = 40,
   });
 
   @override
@@ -40,7 +42,7 @@ class TopLayout extends StatelessWidget{
               "#3985E3".toColor(),
             ],
           ),
-          SizedBox(height: 40),
+          SizedBox(height: padding),
           Image.asset(
             imgPath,
             width: 171,

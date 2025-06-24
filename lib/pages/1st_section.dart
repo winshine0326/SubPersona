@@ -5,6 +5,7 @@ import 'package:subpersona/utils/toColor.dart';
 import 'package:subpersona/components/button.dart';
 import 'package:subpersona/components/top_layout.dart';
 import 'package:subpersona/pages/home.dart';
+import 'package:subpersona/components/task_btn.dart';
 
 class FirstSection extends StatelessWidget {
   @override
@@ -25,83 +26,14 @@ class FirstSection extends StatelessWidget {
                       title: "휴대폰을 흔들어보세요",
                       subtitle: "1단계",
                       imgPath: "assets/Cone.png",
+                      padding: 52,
                     ),
                     SizedBox(height: 100),
 
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 22),
-                      clipBehavior: Clip.antiAlias,
-                      decoration: ShapeDecoration(
-                        color: const Color(0xFF2C2C36),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SizedBox(
-                            width: 309,
-                            child: Text(
-                              '당신의 내면을 분석해드립니다',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 22,
-                                fontFamily: 'Pretendard',
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 16),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                width: 309,
-                                child: Text(
-                                  '1. 당신의 위치, 움직임, 목소리, 표정을 기반으로 지금 이 순간의 내면 상태를 정밀 분석합니다.',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontFamily: 'Pretendard',
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 8),
-                              SizedBox(
-                                width: 309,
-                                child: Text(
-                                  '2. 첨단 AI 센서 시스템으로 겉으로 드러나지 않는 진짜 감정을 파악하세요.',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontFamily: 'Pretendard',
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 8),
-                              SizedBox(
-                                width: 309,
-                                child: Text(
-                                  '3. SubPersona는 보이지 않는 당신을 이해하는, 단 하나의 인공지능 분석기입니다.',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontFamily: 'Pretendard',
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                    TaskBtn(
+                      ImgPath:"assets/shake.png"
                     ),
-                    SizedBox(height: 36),
+                    SizedBox(height: 88),
                     Center(
                       child: AnalyzeButton(
                         nextPage: HomePage(),
