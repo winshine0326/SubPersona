@@ -44,7 +44,7 @@ class ResultPage extends StatelessWidget {
                           SizedBox(
                             width: 309,
                             child: Text(
-                              '당신의 내면을 분석해드립니다',
+                              '분석결과',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
@@ -61,7 +61,7 @@ class ResultPage extends StatelessWidget {
                               SizedBox(
                                 width: 309,
                                 child: Text(
-                                  '1. 당신의 위치, 움직임, 목소리, 표정을 기반으로 지금 이 순간의 내면 상태를 정밀 분석합니다.',
+                                  '흔들기 분석 : 당신은 휴대폰을 잘 흔드는 사람입니다.',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
@@ -74,7 +74,7 @@ class ResultPage extends StatelessWidget {
                               SizedBox(
                                 width: 309,
                                 child: Text(
-                                  '2. 첨단 AI 센서 시스템으로 겉으로 드러나지 않는 진짜 감정을 파악하세요.',
+                                  '음성 인식 분석 : 당신은 인사성이 밝은 사람입니다.',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
@@ -87,7 +87,7 @@ class ResultPage extends StatelessWidget {
                               SizedBox(
                                 width: 309,
                                 child: Text(
-                                  '3. SubPersona는 보이지 않는 당신을 이해하는, 단 하나의 인공지능 분석기입니다.',
+                                  '사진 찍기 분석 : 당신은 아름다운 사람입니다.',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
