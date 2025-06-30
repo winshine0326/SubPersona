@@ -5,6 +5,7 @@ import 'package:subpersona/utils/toColor.dart';
 import 'package:subpersona/components/top_layout.dart';
 import 'package:subpersona/components/button.dart';
 import 'package:subpersona/pages/home.dart';
+import 'package:subpersona/pages/actually.dart';
 
 
 class ResultPage extends StatelessWidget {
@@ -104,7 +105,7 @@ class ResultPage extends StatelessWidget {
                     SizedBox(height: 36),
                     Center(
                         child: AnalyzeButton(
-                          nextPage: HomePage(),
+                          nextPage: ActuallyPage(),
                           label: '확인',
                         )
                     )
