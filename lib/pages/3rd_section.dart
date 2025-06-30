@@ -6,6 +6,7 @@ import 'package:subpersona/components/button.dart';
 import 'package:subpersona/components/top_layout.dart';
 import 'package:subpersona/pages/home.dart';
 import 'package:subpersona/components/task_btn.dart';
+import 'package:subpersona/pages/result.dart';
 
 class ThirdSection extends StatelessWidget {
   @override
@@ -37,7 +38,7 @@ class ThirdSection extends StatelessWidget {
                       SizedBox(height: 88),
                       Center(
                         child: AnalyzeButton(
-                          nextPage: HomePage(),
+                          nextPage: ResultPage(),
                           label: '다음으로',
                         ),
                       )
