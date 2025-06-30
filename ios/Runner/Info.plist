@@ -48,5 +48,11 @@
 	<key>LSApplicationCategoryType</key>
 	<string>&lt;key&gt;NSMotionUsageDescription&lt;/key&gt;
 &lt;string&gt;This app uses the gyroscope to detect movement.&lt;/string&gt;</string>
+	<key>CFBundleGetInfoString</key>
+	<string>&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;
+&lt;string&gt;이 앱은 마이크를 사용합니다.&lt;/string&gt;</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>&lt;key&gt;NSSpeechRecognitionUsageDescription&lt;/key&gt;
+&lt;string&gt;이 앱은 음성 인식을 사용합니다.&lt;/string&gt;</string>
 </dict>
 </plist>
