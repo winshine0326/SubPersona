@@ -20,6 +20,7 @@ class _FirstSectionState extends State<FirstSection> {
   StreamSubscription? _gyroSub;
   double x = 0.0, y = 0.0, z = 0.0;
   bool isListening = false;
+  bool _dialogOpen = false;
 
   void _startGyro() {
     if (isListening) return;
@@ -31,6 +32,10 @@ class _FirstSectionState extends State<FirstSection> {
       });
       if (event.x.abs() > 3 || event.y.abs() > 3 || event.z.abs() > 3) {
         debugPrint('흔들림 감지됨');
+        if(!_dialogOpen){
+          _showGyroDialog();
+          _dialogOpen = true;
+        }
       }
     });
 
@@ -96,6 +101,50 @@ class _FirstSectionState extends State<FirstSection> {
       ),
     );
   }
+
+  void _showGyroDialog() {
+    showCupertinoDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        return StatefulBuilder(
+          builder: (context, setModalState) {
+            // 자이로 업데이트될 때마다 setModalState를 호출하도록 타이머 설정
+            Timer.periodic(Duration(milliseconds: 100), (timer) {
+              if (!_dialogOpen) {
+                timer.cancel();
+                return;
+              }
+              setModalState(() {});
+            });
+
+            return CupertinoAlertDialog(
+              title: Text('흔들림 감지'),
+              content: Column(
+                children: [
+                  SizedBox(height: 12),
+                  Text('X: ${x.toStringAsFixed(2)}'),
+                  Text('Y: ${y.toStringAsFixed(2)}'),
+                  Text('Z: ${z.toStringAsFixed(2)}'),
+                ],
+              ),
+              actions: [
+                CupertinoDialogAction(
+                  isDestructiveAction: true,
+                  child: Text('닫기'),
+                  onPressed: () {
+                    _dialogOpen = false;
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
 }
 
 
