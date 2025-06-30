@@ -2,15 +2,38 @@
 
 AI 인간 내면 분석기
 
-## Getting Started
+# 서비스 설명
 
-This project is a starting point for a Flutter application.
+SubPersona는 사용자의 정보를 분석하는 척하면서, 유저가 ‘정말 분석되는 것 같은’ 몰입을 느끼게 하는 앱 서비스입니다. “I am rich” 서비스와 비슷한 결의 서비스입니다.
 
-A few resources to get you started if this is your first Flutter project:
+이 앱은 마치 진지한 AI 분석기처럼 행동합니다.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+위치 정보를 읽고, 기기의 흔들림을 감지하며, 마이크와 카메라 권한을 요청하고, 그럴듯한 분석 메시지를 타이핑 애니메이션으로 출력합니다.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+하지만 결국 어떤 정보도 분석하지 않으며, 실제로는 아무 기능도 수행하지 않습니다. 오직 “분석하는 척”을 통해, 사용자가 자신이 분석되고 있다고 착각하게 만드는 것이 이 앱의 전부입니다.
+
+# 서비스 목적
+
+최근 생성형 AI와 LLM의 발전은 디지털 산업 전반에 새로운 가능성을 열어주었습니다.하지만 동시에, 이러한 흐름에 그저 편승한 사례들 또한 계속적으로 나오고 있습니다. 많은 서비스들이 “AI 분석”, “AI 추천”이라는 이름 아래 실제로는 의미 없는 기능을 덧붙이거나, 사용자 경험과 무관한 AI 요소를 억지로 끼워 넣는 현상이 빈번하게 나타나고 있습니다. **SubPersona**는 이러한 시대적 흐름에 대한 유쾌하고도 날카로운 **풍자**를 합니다.
+
+# 사용할 Native 기능
+
+자이로 센서 - 기기 회전 감지
+
+마이크 입력 감지 - 음성 크기(dB) 감지
+
+카메라 접근 - 사진/영상 촬영 가능
+
+자이로 센서, 마이크, 카메라 접근을 통해 사용자의 감정 및 내면을 분석하는 척합니다. 사실 각 정보들을 다 수집만 하고 실제 분석은 이루어지지 않습니다.
+
+---
+
+# 실행 영상
+https://www.youtube.com/shorts/wJtFu-jbDdY
+
+---
+
+
+## 디자인
+
+<img width="974" alt="123451531" src="https://github.com/user-attachments/assets/f276baea-f21d-4d42-bb0d-20b1a3b30a44" />
