@@ -13,30 +13,27 @@ class TaskBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Column(
-        children: [
-          Container(
-            width: 88,
-            height: 88,
-            padding: const EdgeInsets.all(16),
-            clipBehavior: Clip.antiAlias,
-            decoration: ShapeDecoration(
-              color: const Color(0xFF2C2C36),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(100),
-              ),
-            ),
-            child: Center(
-              child: SizedBox(
-                width: 32,
-                height: 32,
-                child: Image.asset(ImgPath, fit: BoxFit.contain),
-              ),
-            ),
+    return CupertinoButton(
+      padding: EdgeInsets.zero, // 기본 여백 제거
+      onPressed: onPressed,
+      child: Container(
+        width: 88,
+        height: 88,
+        padding: const EdgeInsets.all(16),
+        clipBehavior: Clip.antiAlias,
+        decoration: ShapeDecoration(
+          color: const Color(0xFF2C2C36),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(100),
           ),
-        ],
+        ),
+        child: Center(
+          child: SizedBox(
+            width: 32,
+            height: 32,
+            child: Image.asset(ImgPath, fit: BoxFit.contain),
+          ),
+        ),
       ),
     );
   }
