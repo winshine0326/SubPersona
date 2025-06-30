@@ -45,5 +45,8 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>LSApplicationCategoryType</key>
+	<string>&lt;key&gt;NSMotionUsageDescription&lt;/key&gt;
+&lt;string&gt;This app uses the gyroscope to detect movement.&lt;/string&gt;</string>
 </dict>
 </plist>

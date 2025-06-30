@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 class AnalyzeButton extends StatelessWidget {
   final Widget nextPage;
   final String label;
+  final VoidCallback? onPressed;
 
   const AnalyzeButton({
     super.key,
     required this.nextPage,
     this.label = '분석하기',
+    this.onPressed,
   });
 
   @override
@@ -17,6 +19,7 @@ class AnalyzeButton extends StatelessWidget {
     return CupertinoButton(
       padding: EdgeInsets.zero,
       onPressed: () {
+        onPressed?.call();
         Navigator.push(
           context,
           CupertinoPageRoute(builder: (context) => nextPage),
